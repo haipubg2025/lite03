@@ -61,7 +61,7 @@ function InnerApp() {
   }, [fontFamily]);
 
   return (
-    <div className={`fixed inset-0 w-[100dvw] h-[100dvh] flex overflow-hidden transition-colors duration-1000 ${theme.bgClass}`}
+    <div className={`fixed inset-0 w-full h-[100dvh] flex overflow-hidden transition-colors duration-1000 ${theme.bgClass}`}
          style={{ fontFamily: `"${fontFamily}", sans-serif`, fontSize: `${fontSize}px` }}>
       
       <AIStreamOverlay />

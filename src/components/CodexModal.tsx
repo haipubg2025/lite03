@@ -100,9 +100,9 @@ export default function CodexModal({ onClose }: { onClose: () => void }) {
   const setWorldDetails = (val: any) => setGameData({ ...gameData, worldDetails: val });
 
   return (
-    <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0}} className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 md:p-8" onClick={onClose}>
+    <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0}} className="fixed top-0 left-0 w-full h-[100dvh] z-[100] bg-black/80 backdrop-blur-md flex flex-col p-0 m-0" onClick={onClose}>
       <div 
-        className="bg-[#0a0a0a] w-full max-w-7xl h-full flex flex-col rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl overflow-hidden"
+        className="bg-[#0a0a0a] w-full h-full flex flex-col rounded-none border-0 shadow-none overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-4 border-b border-white/10 flex items-center justify-between shrink-0">

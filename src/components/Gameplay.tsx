@@ -1746,7 +1746,13 @@ Hành động tiếp theo của người chơi: ${userAction}`;
         )}
 
         {showStatus && (
-          <StatusModal onClose={() => setShowStatus(false)} />
+          <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4" onClick={() => setShowStatus(false)}>
+            <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 text-white text-center max-w-sm w-full" onClick={e => e.stopPropagation()}>
+              <h3 className="text-xl font-bold mb-2">Trạng Thái (Status)</h3>
+              <p className="text-white/60 mb-4">Tính năng đang được phát triển...</p>
+              <button className="px-4 py-2 bg-blue-600 rounded-lg text-sm text-white" onClick={() => setShowStatus(false)}>Đóng</button>
+            </div>
+          </div>
         )}
 
         {showRules && (
@@ -1754,7 +1760,7 @@ Hành động tiếp theo của người chơi: ${userAction}`;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex flex-col w-screen h-screen p-0 m-0 overflow-hidden"
+            className="fixed top-0 left-0 w-full h-[100dvh] z-50 bg-black/80 backdrop-blur-md flex flex-col p-0 m-0 pointer-events-auto"
             onClick={() => setShowRules(false)}
           >
             <div 
@@ -1795,7 +1801,7 @@ Hành động tiếp theo của người chơi: ${userAction}`;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl flex flex-col w-screen h-screen p-0 m-0 overflow-hidden"
+            className="fixed top-0 left-0 w-full h-[100dvh] z-50 bg-black/80 backdrop-blur-xl flex flex-col p-0 m-0 pointer-events-auto"
             onClick={() => setShowMemory(false)}
           >
             <div 
@@ -2132,7 +2138,7 @@ Hành động tiếp theo của người chơi: ${userAction}`;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl flex flex-col w-screen h-screen p-0 m-0 overflow-hidden"
+            className="fixed top-0 left-0 w-full h-[100dvh] z-50 bg-black/80 backdrop-blur-xl flex flex-col p-0 m-0 pointer-events-auto"
             onClick={() => setShowSettings(false)}
           >
             <div 

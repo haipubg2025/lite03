@@ -225,7 +225,7 @@ export default function GalleryModal({ onClose, isSelectMode, onSelect }: Galler
       animate={{ opacity: 1 }} 
       exit={{ opacity: 0 }} 
       transition={{ duration: 0.2 }}
-      className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex flex-col w-screen h-screen p-0 m-0 overflow-hidden"
+      className="fixed top-0 left-0 w-full h-[100dvh] z-50 bg-black/80 backdrop-blur-md flex flex-col p-0 m-0 pointer-events-auto"
       onClick={onClose}
     >
       <div 

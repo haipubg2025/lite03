@@ -256,11 +256,11 @@ export default function CharacterModal({ type, npcIndex, onClose }: CharacterMod
       animate={{ opacity: 1, scale: 1 }} 
       exit={{ opacity: 0, scale: 0.98 }} 
       transition={{ duration: 0.2 }}
-      className="absolute inset-0 z-50 bg-black/80 backdrop-blur-md flex flex-col items-center justify-center p-4 md:p-8"
+      className="fixed top-0 left-0 w-full h-[100dvh] z-50 bg-black/80 backdrop-blur-md flex flex-col p-0 m-0"
       onClick={onClose}
     >
       <div 
-        className="w-full max-w-7xl h-full flex flex-col shadow-2xl relative bg-[#050505] rounded-2xl md:rounded-3xl border border-white/10 overflow-hidden"
+        className="w-full h-full flex flex-col shadow-none relative bg-[#050505] rounded-none border-0 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-blue-900/20 to-transparent pointer-events-none" />
